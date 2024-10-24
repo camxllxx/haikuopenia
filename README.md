@@ -1,2 +1,14 @@
 # haikuopenia
 request
+import OpenAI from "openai";
+const openai = new OpenAI();
+const completion = await openai.chat.completions.create({
+    model: "gpt-4o",
+    messages: [
+        {"role": "user", "content": "write a haiku about ai"}
+    ]
+});
+
+//Pensées infinies,  
+Dans des flux de mots tissés,  
+L'esprit s'éveille.
